@@ -218,8 +218,8 @@ ParticleVector EvtGenInterface::decay(const Particle &parent,
   }
   // generate the decay
   ParticleVector output;
-  EvtId parID(EvtGenID(parent.id()));
   try {
+    EvtId parID(EvtGenID(parent.id()));
     EvtDecayBase *decayer = NULL;
     // create evtgen particle for the parent
     EvtParticle* particle = EvtGenParticle(parent);
